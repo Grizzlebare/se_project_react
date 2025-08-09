@@ -1,3 +1,35 @@
+export const weatherOptions = [
+  {
+    day: true,
+    condition: "clear",
+    url: new URL("../assets/day/clear.svg", import.meta.url).href,
+  },
+  {
+    day: true,
+    condition: "cloudy",
+    url: new URL("../assets/day/cloudy.png", import.meta.url).href,
+  },
+  {
+    day: false,
+    condition: "clear",
+    url: new URL("../assets/night/clear.png", import.meta.url).href,
+  },
+  {
+    day: false,
+    condition: "cloudy",
+    url: new URL("../assets/night/cloudy.png", import.meta.url).href,
+  },
+];
+
+export const deafaultWeatherOptions = {
+  day: {
+    url: new URL("../assets/day/default.png", import.meta.url).href,
+  },
+  night: {
+    url: new URL("../assets/night/default.png", import.meta.url).href,
+  },
+};
+
 export const defaultClothingItems = [
   {
     _id: 0,
@@ -36,3 +68,10 @@ export const defaultClothingItems = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png?etag=298717ed89d5e40b1954a1831ae0bdd4",
   },
 ];
+
+export const coordinates = {
+  latitude: 40.73061,
+  longitude: -73.935242,
+};
+
+export const APIkey = "706c0f43a7972edf5bf7c49c6aa1187f";

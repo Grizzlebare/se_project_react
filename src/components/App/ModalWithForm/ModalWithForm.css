@@ -1,14 +1,22 @@
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../vendor/fonts/CabinetGrotesk-Regular.woff") format("woff");
+}
+
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #0000004d;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   visibility: hidden;
+  z-index: 1000;
 }
 
 .modal__open {
@@ -16,7 +24,11 @@
 }
 
 .modal__title {
+  font-family: "Cabinet Grotesk";
+  font-weight: 700px;
+  font-size: 16px;
   margin: 0;
+  padding: 0 0 24px 0;
 }
 
 .modal_close {
@@ -26,12 +38,14 @@
 }
 
 .modal__content {
-  background-color: #fff;
+  background-color: #ffffff;
   position: relative;
   padding: 28px 28px 36px;
+  width: 100%;
   max-width: 496px;
   box-sizing: border-box;
-  width: 100%;
+  border-radius: 20px;
+  padding: 28px 28px 36px;
 }
 
 .modal__form {
@@ -42,11 +56,76 @@
 
 .modal__input {
   display: block;
+  width: 100%;
+  border: none;
+  padding-top: 8px;
+  border-bottom: 1px solid #000000;
+}
+
+.modal__legend {
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 0 0 12px 0;
+  font-family: "Cabinet Grotesk";
+  font-weight: 700px;
+  font-size: 16px;
+  font-style: bold;
+}
+
+.modal__label {
+  font-family: "Cabinet Grotesk";
+  font-weight: 700px;
+  font-size: 16px;
+  padding: 0 0 24px 0;
+  gap: 8px;
 }
 
 .modal__radio-buttons {
-  border: none;
-  padding: 0;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  margin: 0;
+  padding: 0 0 36px 0;
+  border: none;
+  color: #00000080;
+}
+
+.modal__radio-input {
+  align-items: center;
+  border: none;
+  column-gap: 5px;
+}
+
+.modal__label_type_radio {
+  padding: 0;
+}
+
+.button__container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input[type="radio"] {
+  accent-color: #000000;
+  margin-right: 5px;
+}
+
+.modal__footer {
+  font-family: "Cabinet Grotesk";
+  font-weight: 700px;
+  font-size: 16px;
+}
+
+.modal__submit {
+  border-radius: 4px;
+  width: 124px;
+  height: 36px;
+  padding: 8px 16px 8px 16px;
+  gap: 8px;
+  background: #0000004d;
+  border: 0;
+  color: #fff;
 }
