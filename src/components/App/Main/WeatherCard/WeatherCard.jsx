@@ -1,6 +1,6 @@
 import "./WeatherCard.css";
 import {
-  deafaultWeatherOptions,
+  defaultWeatherOptions,
   weatherOptions,
 } from "../../../../utils/constants";
 import { filterWeatherData } from "../../../../utils/weatherApi";
@@ -15,7 +15,7 @@ function WeatherCard({ weatherData }) {
 
   let weatherOption;
   if (filteredOptions.length === 0) {
-    weatherOption = deafaultWeatherOptions[weatherData.isDay ? "day" : "night"];
+    weatherOption = defaultWeatherOptions[weatherData.isDay ? "day" : "night"];
   } else {
     weatherOption = filteredOptions[0];
   }
