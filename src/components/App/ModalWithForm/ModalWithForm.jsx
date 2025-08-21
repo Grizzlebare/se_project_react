@@ -11,9 +11,8 @@ function ModalWithForm({
 }) {
   return (
     <div
-      className={`modal modal_type_${name} ${
-        activeModal === "add-garment" && "modal__open"
-      }`}
+      className={`modal modal_type_${name} ${isOpen ? "modal__open" : ""}`}
+      aria-hidden={!isOpen}
     >
       <div className="modal__content">
         <h2 className="modal__title">{title}</h2>
